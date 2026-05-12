@@ -1,8 +1,10 @@
-name: Use Reusable Workflow
+name: caller workflow
+
 on:
-  push:
+  workflow_dispatch:
+
 jobs:
-  call-reusable-workflow:
-    uses: ./.github/workflows/call.yml
+  call-workflow:
+    uses: ./.github/workflows/call-workflow.yml
     with:
-      name: "arif"
+      name: Arif
