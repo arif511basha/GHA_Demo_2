@@ -1,0 +1,15 @@
+name: call workflow
+on: workflow-call
+     inputs:
+       name:
+         description: 'enter your name'
+         required: true
+         default: 'string'
+
+jobs:
+  call-reusable-workflow-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: reusable workflow step
+        run: echo "This is a reusable workflow step and the name is ${{ inputs.name }}"
+      
